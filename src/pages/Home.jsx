@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import BottomNavbarComponent from "../components/BottomNavbar";
 import Categories from "../components/Categories";
 import Banner from "../components/Banner";
 
@@ -11,6 +12,7 @@ export default function Home() {
       <div>
         <header>
           <Navbar />
+          <BottomNavbarComponent/>
         </header>
         {selectedCategory.length === 0 && (
           <div>
@@ -20,6 +22,9 @@ export default function Home() {
         <section>
           <Categories />
         </section>
+       
+          
+        
       </div>
     </React.Fragment>
   );
