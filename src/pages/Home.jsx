@@ -4,19 +4,24 @@ import Categories from "../components/Categories";
 import Banner from "../components/Banner";
 
 export default function Home() {
+  const selectedCategory = localStorage.getItem("selectedCategory");
+
   return (
     <React.Fragment>
       <div>
         <header>
           <Navbar />
         </header>
-        <div>
-          <Banner />
-        </div>
-        <section sx={{ overflowX: "scroll", whitespace: "nowrap" }}>
+        {selectedCategory.length === 0 && (
+          <div>
+            <Banner />
+          </div>
+        )}
+        <section>
           <Categories />
         </section>
       </div>
     </React.Fragment>
   );
 }
+

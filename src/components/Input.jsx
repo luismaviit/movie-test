@@ -40,11 +40,15 @@ const IconContainer = styled.div`
   padding: 0 10px;
 `;
 
-const InputComponent = ({ label, value, onChange }) => {
+const InputComponent = ({ label, value }) => {
+  const handleChange= (event)=> {
+    localStorage.setItem("filterInput", category);
+    console.log(event.target.value)
+  }
   return (
     <InputContainer>
       <InputLabel>{label}</InputLabel>
-      <InputField type="text" value={value} onChange={onChange} />
+      <InputField onChange={handleChange} type="text" value={value}  />
       <IconContainer>
         <SearchIcon />
       </IconContainer>

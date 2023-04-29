@@ -26,22 +26,34 @@ const NavbarItems = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  @media (max-width: 880px) {
+    justify-content: space-around;
+  }
 `;
 
 const Logo = styled.img`
   height: 40px;
+  @media (max-width: 880px) {
+    height: 30px;
+  }
 `;
 
 const Categories = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
+  @media (max-width: 880px) {
+    display: none;
+  }
   span {
     font-size: 20px;
     color: white;
     font-weight: ${({ selected }) => (selected ? "bold" : "normal")};
     margin-right: 10px;
     cursor: pointer;
+    @media (max-width: 880px) {
+      display: none;
+    }
   }
 `;
 
