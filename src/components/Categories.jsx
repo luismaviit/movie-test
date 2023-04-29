@@ -7,18 +7,23 @@ const Section = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   margin: 20px 0;
-  padding-left: 5%;
+  /* ß */
   margin-bottom: -15px;
   h2 {
+    display: flex;
+    justify-self: f;
     text-align: start;
     font-size: 26px;
     font-weight: bold;
     margin: 0;
     margin-bottom: 5px;
+    align-self: flex-start;
+    margin-left: 90px;
   }
 `;
+
 
 const ScrollContainer = styled.div`
   display: flex;
