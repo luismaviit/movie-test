@@ -1,7 +1,7 @@
 
 # :computer: Tecnoglass, movi Test
 
-![plot](./src/assets/bold.png)
+![plot](./src/assets/screen.jpg)
 
 ## :memo: Instrucciones.
 

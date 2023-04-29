@@ -68,6 +68,7 @@ const NavbarComponent = () => {
   };
 
   const handleCategoryClick = (category) => {
+    window.location.reload()
     setSelectedCategory(category);
     localStorage.setItem("selectedCategory", category);
   };

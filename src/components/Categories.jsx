@@ -130,9 +130,9 @@ const MoviesByGenre = () => {
       scrollRef.current[genre].scrollLeft += 200;
     }
   };
+
   const selectedCategory = localStorage.getItem("selectedCategory");
   const renderGenres = () => {
-    
     if (selectedCategory) {
       const genre = selectedCategory;
       return (
@@ -146,8 +146,21 @@ const MoviesByGenre = () => {
               {getMoviesByGenre(genre).map((movie) => (
                 <Movie key={movie.id}>
                   <MovieImage src={movie.image.medium} alt={movie.name} />
+                  
                   <MovieInfo>
-                    {/* ... */}
+                    <h1 >{movie.name}</h1>
+                    <p >Status: {movie.status}</p>
+                    <p>Rating: {movie.rating.average}</p>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: `${movie.summary
+                          .split(" ")
+                          .slice(0, 20)
+                          .join(" ")}...`,
+                      }}
+                    ></div>
+                    <Button url={movie.url}/>
+                  
                   </MovieInfo>
                 </Movie>
               ))}
@@ -171,7 +184,19 @@ const MoviesByGenre = () => {
                 <Movie key={movie.id}>
                   <MovieImage src={movie.image.medium} alt={movie.name} />
                   <MovieInfo>
-                    {/* ... */}
+                    <h1 >{movie.name}</h1>
+                    <p >Status: {movie.status}</p>
+                    <p>Rating: {movie.rating.average}</p>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: `${movie.summary
+                          .split(" ")
+                          .slice(0, 20)
+                          .join(" ")}...`,
+                      }}
+                    ></div>
+                    <Button url={movie.url}/>
+                  
                   </MovieInfo>
                 </Movie>
               ))}
