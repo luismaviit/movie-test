@@ -1,13 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import BottomNavbarComponent from "../components/BottomNavbar";
 import Categories from "../components/Categories";
 import Banner from "../components/Banner";
 
 export default function Home() {
-  useEffect(() => {
-    localStorage.setItem("selectedCategory", "");
-   }, []);
   const selectedCategory = localStorage.getItem("selectedCategory");
 
   return (
@@ -17,19 +14,15 @@ export default function Home() {
           <Navbar />
           <BottomNavbarComponent/>
         </header>
-        {selectedCategory.length === 0 && (
-          <div>
-            <Banner />
-          </div>
-        )}
+        {selectedCategory && selectedCategory !== "" ? (
+          null
+        ) : <div>
+        <Banner />
+      </div>}
         <section>
           <Categories />
         </section>
-       
-          
-        
       </div>
     </React.Fragment>
   );
 }
-
