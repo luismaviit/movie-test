@@ -5,6 +5,9 @@ import Categories from "../components/Categories";
 import Banner from "../components/Banner";
 
 export default function Home() {
+  useEffect(() => {
+    localStorage.setItem("selectedCategory", "");
+   }, []);
   const selectedCategory = localStorage.getItem("selectedCategory");
 
   return (
