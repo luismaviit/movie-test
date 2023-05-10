@@ -48,4 +48,4 @@ Herramientas utilizadas
 
 ### :rocket: Deploy
 
-Para ver el proyecto funcionando, diregirse a https://movie-test-hqly.vercel.app/
+Para ver el proyecto funcionando, diregirse a https://movie-test-dun.vercel.app/
